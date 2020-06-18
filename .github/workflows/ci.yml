@@ -1,0 +1,38 @@
+# SPDX-FileCopyrightText: 2020 Serokell <https://serokell.io/>
+#
+# SPDX-License-Identifier: MPL-2.0
+
+name: CI
+
+# Trigger the workflow on pull request or push to the master branch
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  xrefcheck-self:
+    name: Run this action on this repo
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: No args, latest version is assumed
+      uses: ./
+
+    - name: Only install
+      uses: ./
+      with:
+        action: install
+
+    - name: Run with custom arguments
+      uses: ./
+      with:
+        xrefcheck-args: --mode local-only --progress
+
+    # Run specific versions
+    - name: Run 0.1.2
+      uses: ./
+      with:
+        xrefcheck-version: 0.1.2
