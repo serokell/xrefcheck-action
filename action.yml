@@ -1,0 +1,29 @@
+name: 'xrefcheck'
+description: 'Check cross-references in your repository'
+author: 'Serokell'
+inputs:
+  xrefcheck-version:
+    required: false
+    description: 'Version of xrefcheck to use. If set to "latest", it will always get the latest stable version.'
+    default: 'latest'
+  xrefcheck-args:
+    required: false
+    description: 'Arguments passed to xrefcheck (verbatim)'
+  action:
+    required: false
+    description: |
+      Action you want to be performed, can be one of:
+      * install – just install the tool, its path will be in this action's output.
+      * run – install the tool and run it.
+    default: 'run'
+outputs:
+  xrefcheck-path:
+    description: 'The relative path of the `xrefcheck` executable'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.xrefcheck-args }}
+  env:
+    VERSION: ${{ inputs.xrefcheck-version }}
+    ACTION: ${{ inputs.action }}
