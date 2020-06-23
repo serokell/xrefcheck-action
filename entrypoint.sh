@@ -20,7 +20,7 @@ case "$ACTION" in
     need_run=true
     ;;
   "install" )
-    echo "xrefcheck will installed but not launched"
+    echo "xrefcheck will be installed but not launched"
     need_run=false
     ;;
   * )
