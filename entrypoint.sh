@@ -29,6 +29,8 @@ case "$ACTION" in
     ;;
 esac
 
+env
+
 # Download xrefcheck archive and unpack it.
 echo "Downloading xrefcheck version $VERSION"
 wget --quiet -O - "$URL" | tar xz
