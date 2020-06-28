@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2020 Serokell <https://serokell.io/>
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # Container image that runs your code
 FROM alpine:3.11
 
