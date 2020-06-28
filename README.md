@@ -10,9 +10,45 @@ This repository contains a GitHub action that simplifies the usage of the [xrefc
 
 ## Usage
 
-TODO
+By default this action installs the latest version of `xrefcheck` (it downloads a static binary from GitHub releases) and runs it with no arguments.
 
-## For Contributors [↑](#-patak)
+### Inputs
+
+Please refer to [action.yml](./action.yml) for a full list of inputs.
+Quick overview:
+* `xrefcheck-version` lets you pick a specific version.
+* `xrefcheck-args` lets you pass custom arguments.
+* `action` can be set to `install` if just want to install the tool and then use it manually.
+This functionality is experimental and maybe be reworked later.
+
+### Outputs
+
+`xrefcheck-path` output will contain a relative path to the `xrefcheck` executable.
+In a future version it may contain an absolute path.
+
+### Example
+
+To run `xrefcheck-0.1.2` on your repository in the `local-only` mode:
+
+```yaml
+jobs:
+  xrefcheck:
+    name: Check references
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: serokell/xrefcheck-action@v1
+      with:
+        xrefcheck-version: 0.1.2
+        xrefcheck-args: --mode local-only
+```
+
+### Supported versions
+
+<!-- Make sure to update ci.yml when you update this list -->
+- 0.1.2
+
+## For Contributors
 
 Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more information.
 
