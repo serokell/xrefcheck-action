@@ -6,6 +6,8 @@
 
 # GitHub Action for xrefcheck
 
+[![REUSE status](https://api.reuse.software/badge/github.com/serokell/xrefcheck-action)](https://api.reuse.software/info/github.com/serokell/xrefcheck-action)
+
 This repository contains a GitHub action that simplifies the usage of the [xrefcheck](https://github.com/serokell/xrefcheck) tool.
 
 ## Usage

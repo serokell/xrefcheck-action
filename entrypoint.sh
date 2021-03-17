@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# SPDX-FileCopyrightText: 2020 Serokell <https://serokell.io/>
+#
+# SPDX-License-Identifier: MPL-2.0
+
 # This script downloads xrefcheck from GitHub releases, unpacks it
 # and optionally runs.
 # Inputs:
