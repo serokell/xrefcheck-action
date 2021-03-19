@@ -43,3 +43,8 @@ jobs:
       uses: ./
       with:
         xrefcheck-version: 0.1.2
+
+    - name: Run 0.1.3
+      uses: ./
+      with:
+        xrefcheck-version: 0.1.3
