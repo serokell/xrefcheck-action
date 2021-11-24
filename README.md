@@ -52,6 +52,16 @@ jobs:
 - 0.1.3
 - 0.2
 
+#### Updating supported versions
+
+When a new `xrefcheck` version is released and you want it to be supported by this action, do the following:
+1. Add one more check to [CI](/.github/workflows/ci.yml).
+2. Update the list of supported versions above.
+Optional: update the above example to use the latest version.
+3. If necessary (e. g. if `xrefcheck` is distributed differently), update implementation of _this_ action.
+If you do it, a new version of this action should be created, which means that a new tag should be pushed.
+If there is more than one tag referring to some version, such as `v1` and `v1.0.1`, some tag may have to force-pushed.
+
 ## For Contributors
 
 Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more information.
