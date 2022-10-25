@@ -45,14 +45,14 @@ jobs:
         xrefcheck-args: --mode local-only
 ```
 
-### Supported versions
+### Supported xrefcheck versions
 
 <!-- Make sure to update ci.yml when you update this list -->
 - 0.1.2
 - 0.1.3
 - 0.2
 - 0.2.1
-- 0.2.2
+- 0.2.2: requires xrefcheck-action v1.0.3 or greater
 
 #### Updating supported versions
 
