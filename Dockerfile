@@ -8,7 +8,7 @@ FROM alpine:3.11
 # Install dependencies
 RUN apk update
 ## pass these flags to make the image smaller
-RUN apk --no-cache --virtual add bash wget
+RUN apk --no-cache --virtual add bash wget git
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh /entrypoint.sh

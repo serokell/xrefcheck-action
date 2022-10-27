@@ -30,7 +30,7 @@ In a future version it may contain an absolute path.
 
 ### Example
 
-To run `xrefcheck-0.2.1` on your repository in the `local-only` mode:
+To run `xrefcheck-0.2.2` on your repository in the `local-only` mode:
 
 ```yaml
 jobs:
@@ -41,17 +41,18 @@ jobs:
     - uses: actions/checkout@v2
     - uses: serokell/xrefcheck-action@v1
       with:
-        xrefcheck-version: 0.2.1
+        xrefcheck-version: 0.2.2
         xrefcheck-args: --mode local-only
 ```
 
-### Supported versions
+### Supported xrefcheck versions
 
 <!-- Make sure to update ci.yml when you update this list -->
 - 0.1.2
 - 0.1.3
 - 0.2
 - 0.2.1
+- 0.2.2: requires xrefcheck-action v1.0.3 or greater
 
 #### Updating supported versions
 

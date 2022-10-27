@@ -49,4 +49,4 @@ if [ "$need_run" == true ]; then
   set +x
 fi
 
-echo "::set-output name=xrefcheck-path::$xrefcheck_path"
+echo "xrefcheck-path=$xrefcheck_path" >> $GITHUB_OUTPUT
