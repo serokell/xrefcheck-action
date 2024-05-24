@@ -38,7 +38,7 @@ jobs:
     name: Check references
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: serokell/xrefcheck-action@v1
       with:
         xrefcheck-version: 0.2.2
