@@ -15,7 +15,7 @@ jobs:
     name: REUSE Compliance Check
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - uses: fsfe/reuse-action@v1.1
 
   xrefcheck-self:
@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: No args, latest version is assumed
       uses: ./
