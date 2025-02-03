@@ -30,7 +30,7 @@ In a future version it may contain an absolute path.
 
 ### Example
 
-To run `xrefcheck-0.2.2` on your repository in the `local-only` mode:
+To run `xrefcheck-0.3.1` on your repository in the `local-only` mode:
 
 ```yaml
 jobs:
@@ -41,7 +41,7 @@ jobs:
     - uses: actions/checkout@v4
     - uses: serokell/xrefcheck-action@v1
       with:
-        xrefcheck-version: 0.2.2
+        xrefcheck-version: 0.3.1
         xrefcheck-args: --mode local-only
 ```
 
@@ -53,6 +53,8 @@ jobs:
 - 0.2
 - 0.2.1
 - 0.2.2: requires xrefcheck-action v1.0.3 or greater
+- 0.3.0: requires xrefcheck-action v1.0.3 or greater
+- 0.3.1: requires xrefcheck-action v1.0.3 or greater
 
 #### Updating supported versions
 
@@ -73,4 +75,4 @@ Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for more information.
 Xrefcheck and this repository are maintained and funded with ❤️ by [Serokell](https://serokell.io/).
 The names and logo for Serokell are trademark of Serokell OÜ.
 
-We love open source software! See [our other projects](https://serokell.io/community?utm_source=github) or [hire us](https://serokell.io/hire-us?utm_source=github) to design, develop and grow your idea!
+We love open source software! See [our other projects](https://serokell.io/community?utm_source=github) or [hire us](https://serokell.io/contacts?utm_source=github) to design, develop and grow your idea!
